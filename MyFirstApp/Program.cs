@@ -268,11 +268,16 @@ namespace GreenFox
             // then it converts that value to kilometers and prints it
             double miles;
 
-            Console.WriteLine("How far you?");
-            miles = double.Parse(Console.ReadLine());
-            Console.WriteLine("Thats about " + Math.Round(miles * 1.609344, 0) + "km. We use metric system here!");
-            Console.WriteLine();
-
+            try
+            {
+                Console.WriteLine("How far you?");
+                miles = double.Parse(Console.ReadLine());
+                Console.WriteLine("Thats about " + Math.Round(miles * 1.609344, 0) + "km. We use metric system here!");
+                Console.WriteLine();
+            } catch
+            {
+                Console.WriteLine("Ooops! Not a number..");
+            }
             //task15
             // Write a program that asks for two integers
             // The first represents the number of chickens the farmer has
