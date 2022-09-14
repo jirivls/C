@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GFA Apprentice\\greenfox\\App\\MyFirstApp\\MyFirstApp\\MyFirstApp.csproj",
+      "projectUniqueName": "C:\\Users\\GFA Apprentice\\greenfox\\C\\MyFirstApp\\MyFirstApp.csproj",
       "projectName": "MyFirstApp",
-      "projectPath": "C:\\Users\\GFA Apprentice\\greenfox\\App\\MyFirstApp\\MyFirstApp\\MyFirstApp.csproj",
+      "projectPath": "C:\\Users\\GFA Apprentice\\greenfox\\C\\MyFirstApp\\MyFirstApp.csproj",
       "packagesPath": "C:\\Users\\GFA Apprentice\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GFA Apprentice\\greenfox\\App\\MyFirstApp\\MyFirstApp\\obj\\",
+      "outputPath": "C:\\Users\\GFA Apprentice\\greenfox\\C\\MyFirstApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
