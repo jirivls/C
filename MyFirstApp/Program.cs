@@ -3,7 +3,9 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.SymbolStore;
 using System.Linq.Expressions;
+using System.Net;
 using System.Runtime.Intrinsics.X86;
+using System.Xml.Linq;
 
 namespace GreenFox
 {
@@ -16,6 +18,7 @@ namespace GreenFox
 
         static void Main(string[] args)
         {
+            
             // task1
             // Modify this program to greet you instead of the World!
             Console.WriteLine("Hello, Jiri!");
@@ -729,7 +732,7 @@ namespace GreenFox
                     (String.Concat(Enumerable.Repeat(pyramid, i * 2 + 1))),
                     (String.Concat(Enumerable.Repeat("*", emptyChLenP - i - 1))))));
             }
-
+            
             //task30
             // Write a program that reads a number from the standard input, then draws a
             // diamond like this:
@@ -755,10 +758,10 @@ namespace GreenFox
 
             int dCountH = 0;
             int dCountB;
-
+     
 
             Console.WriteLine();
-            //Console.WriteLine(String.Concat(diamond));
+            //Console.WriteLine(String.Concat(diamond * diamond.ToString().Length));
 
             for (int i = 0; i < diamondLineCount; i++)
             {
@@ -788,7 +791,7 @@ namespace GreenFox
 
             }
             //task31
-
+            
             // Write a program that reads a number from the standard input, then draws a
             // square like this:
             //
@@ -915,7 +918,7 @@ namespace GreenFox
 
             } while (!resultN);
 
-
+           
             //task34
             // Write a program that asks for a number
             // It would ask this many times to enter an integer
@@ -924,7 +927,26 @@ namespace GreenFox
             //
             // Sum: 22, Average: 4.4
 
+            int timesN;
+            int numValue;
 
+            Console.WriteLine("How many numbers will be used?");
+            timesN = int.Parse(Console.ReadLine());
+
+            List<int> NumberList = new List<int>();
+           
+
+           for (int i = 0; i < timesN; i++)
+            {
+                Console.WriteLine("Enter a number.");
+                timesN = int.Parse(Console.ReadLine());
+                NumberList.Add(timesN);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("The sum is: "+NumberList.Sum());
+            Console.WriteLine("Their average value is: "+NumberList.Average());
+            Console.WriteLine();
             //task35
             // Crate a program that draws a chess table like this
             //
@@ -949,7 +971,39 @@ namespace GreenFox
                     Console.WriteLine(" % % % %");
                 }
             }
+             
+            //task36
+            //  Create a function that takes two strings as a parameter
+            //  Returns the starting index where the second one is starting in the first one
+            //  Returns `-1` if the second string is not in the first one
 
+            //  Example:
+
+            //  should print: `17`
+            // Console.WriteLine(Substr("this is what I'm searching in", "searching"));
+
+            //  should print: `-1`
+            // Console.WriteLine(Substr("this is what I'm searching in", "not"));
+
+            string subString;
+            string sample;
+
+            Console.WriteLine("What text do you want to search?");
+            sample = Console.ReadLine();
+            Console.WriteLine("What text do you search for?");
+            subString = Console.ReadLine();
+
+            if (sample.Contains(subString))
+            {
+                Console.WriteLine("Searched string starts at position ");
+            } else
+            {
+                Console.WriteLine("Not there.");
+            }
+
+            
+
+            
 
         }
     }

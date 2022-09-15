@@ -6,6 +6,7 @@
 logs
 bin
 obj
+.vs
 # JetBrains
 cmake-build-*/
 
