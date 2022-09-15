@@ -4,7 +4,8 @@
 *.tmp
 *.vs
 logs
-
+bin
+obj
 # JetBrains
 cmake-build-*/
 
