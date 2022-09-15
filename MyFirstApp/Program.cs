@@ -2,12 +2,18 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.SymbolStore;
+using System.Linq.Expressions;
 using System.Runtime.Intrinsics.X86;
 
 namespace GreenFox
 {
     class Program
     {
+        //private static int GetDCountH()
+        //{
+        //    return dCountH;
+        //}
+
         static void Main(string[] args)
         {
             // task1
@@ -178,7 +184,8 @@ namespace GreenFox
             if (f1 > f2)
             {
                 Console.WriteLine(true);
-            } else
+            }
+            else
             {
                 Console.WriteLine(false);
             }
@@ -190,7 +197,8 @@ namespace GreenFox
             if ((g2 * 2) > g1)
             {
                 Console.WriteLine(true);
-            } else
+            }
+            else
             {
                 Console.WriteLine(false);
             }
@@ -211,7 +219,8 @@ namespace GreenFox
             if (check.ToLower().Contains('.'))
             {
 
-            } else
+            }
+            else
             {
                 Console.WriteLine(true);
             }
@@ -231,7 +240,8 @@ namespace GreenFox
             {
                 Console.WriteLine(true);
 
-            } else if (j % 5 == 0)
+            }
+            else if (j % 5 == 0)
             {
                 Console.WriteLine(true);
             }
@@ -274,7 +284,8 @@ namespace GreenFox
                 miles = double.Parse(Console.ReadLine());
                 Console.WriteLine("Thats about " + Math.Round(miles * 1.609344, 0) + "km. We use metric system here!");
                 Console.WriteLine();
-            } catch
+            }
+            catch
             {
                 Console.WriteLine("Ooops! Not a number..");
             }
@@ -327,10 +338,12 @@ namespace GreenFox
             if (oddEvenInput == 0)
             {
                 oddEven = 0;
-            } else if (oddEvenInput % 2 != 0)
+            }
+            else if (oddEvenInput % 2 != 0)
             {
                 oddEven = 1;
-            } else
+            }
+            else
             {
                 oddEven = 2;
             }
@@ -362,13 +375,16 @@ namespace GreenFox
             if (anothernum <= 0)
             {
                 Console.WriteLine("Not enough.");
-            } else if (anothernum == 1)
+            }
+            else if (anothernum == 1)
             {
                 Console.WriteLine("One.");
-            } else if (anothernum == 2)
+            }
+            else if (anothernum == 2)
             {
                 Console.WriteLine("Two.");
-            } else
+            }
+            else
             {
                 Console.WriteLine("A lot.");
             }
@@ -406,10 +422,12 @@ namespace GreenFox
             else if ((partyg == partyb) && ((partyg + partyb) >= 20))
             {
                 Console.WriteLine("The party is excellent!");
-            } else if ((partyg + partyb) >= 20)
+            }
+            else if ((partyg + partyb) >= 20)
             {
                 Console.WriteLine("Quite a cool party!");
-            } else if ((partyg + partyb) < 20)
+            }
+            else if ((partyg + partyb) < 20)
             {
                 Console.WriteLine("Average party...");
             }
@@ -442,10 +460,12 @@ namespace GreenFox
             if ((b21 >= 10) && (b21 <= 20))
             {
                 output2 = "Sweet!";
-            } else if (b21 < 10)
+            }
+            else if (b21 < 10)
             {
                 output2 = "Less!";
-            } else
+            }
+            else
             {
                 output2 = "More!";
             }
@@ -464,8 +484,9 @@ namespace GreenFox
             if ((credits >= 50) && (!isBonus))
             {
                 c21 = c21 - 2;
-            } else if ((credits <= 50) && (!isBonus))
-                {
+            }
+            else if ((credits <= 50) && (!isBonus))
+            {
                 c21 = c21 - 1;
             }
 
@@ -492,7 +513,7 @@ namespace GreenFox
             else
                 output3 = "Run Forest Run!";
 
-                Console.WriteLine(output3);
+            Console.WriteLine(output3);
 
             //task22
             // Create a very simplistic calculator: ask for two numbers and an operation (add, subtract, multiply or divide)
@@ -520,7 +541,7 @@ namespace GreenFox
 
             double result = 0.0;
 
-            switch(operation)
+            switch (operation)
             {
                 case ("+"):
                 case ("add"):
@@ -540,45 +561,45 @@ namespace GreenFox
                     break;
             }
 
-            // use the `switch` statement and the corresponding calculation
-            // store the result of the calculation in the `result` variable
+            //// use the `switch` statement and the corresponding calculation
+            //// store the result of the calculation in the `result` variable
 
 
-            Console.WriteLine("The result of our wonderous calculator is: " + result);
-            Console.WriteLine();
-            //task23
-            // Create a program that writes this line 100 times:
-            // "I won't cheat on the exam!"
+            //Console.WriteLine("The result of our wonderous calculator is: " + result);
+            //Console.WriteLine();
+            ////task23
+            //// Create a program that writes this line 100 times:
+            //// "I won't cheat on the exam!"
             int maxt = 100;
-            for(int i = 0; i <= maxt; i++)
+            for (int i = 0; i <= maxt; i++)
             {
                 Console.WriteLine("I wont cheat on exams!");
             }
 
-            //task24
-            // Create a program that prints all the even numbers between 0 and 500
+            ////task24
+            //// Create a program that prints all the even numbers between 0 and 500
             int max = 500;
-            for (int i = 2; i <= max; i+=2)
+            for (int i = 2; i <= max; i += 2)
             {
                 Console.WriteLine(i);
             }
 
-            //task25
-            // Create a program that asks for a number and prints the multiplication table with that number
-            //
-            // Example:
-            // The number 15 should print:
-            //
-            // 1 * 15 = 15
-            // 2 * 15 = 30
-            // 3 * 15 = 45
-            // 4 * 15 = 60
-            // 5 * 15 = 75
-            // 6 * 15 = 90
-            // 7 * 15 = 105
-            // 8 * 15 = 120
-            // 9 * 15 = 135
-            // 10 * 15 = 150
+            ////task25
+            //// Create a program that asks for a number and prints the multiplication table with that number
+            ////
+            //// Example:
+            //// The number 15 should print:
+            ////
+            //// 1 * 15 = 15
+            //// 2 * 15 = 30
+            //// 3 * 15 = 45
+            //// 4 * 15 = 60
+            //// 5 * 15 = 75
+            //// 6 * 15 = 90
+            //// 7 * 15 = 105
+            //// 8 * 15 = 120
+            //// 9 * 15 = 135
+            //// 10 * 15 = 150
 
             int inputMultiplier;
             int maxMulti = 10;
@@ -588,8 +609,348 @@ namespace GreenFox
 
             for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine(i + " * " + inputMultiplier + " = " + i*inputMultiplier);
+                Console.WriteLine(i + " * " + inputMultiplier + " = " + i * inputMultiplier);
             }
+
+            //task26
+            // Create a program that asks for two numbers
+            // If the second number is not bigger than the first one it should print:
+            // "The second number should be bigger"
+
+            int twoNumbers1;
+            int twoNumbers2;
+
+            Console.WriteLine("Please provide first number.");
+            twoNumbers1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please provide second number.");
+            twoNumbers2 = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (twoNumbers1 > twoNumbers2)
+            {
+                Console.WriteLine("The second number should be bigger.");
+            }
+            else
+            {
+                for (int i = twoNumbers1; i <= twoNumbers2; i++)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            //Console.WriteLine();
+            //// If it is bigger it should count from the first number to the second by one
+            ////
+            //// example:
+
+
+
+            //// first number: 3, second number: 6, should print:
+            ////
+            //// 3
+            //// 4
+            //// 5
+
+            ////task27
+            //// Write a program that prints the numbers from 1 to 100
+            //// but for multiples of three print “Fizz” instead of the number
+            //// and for the multiples of five print “Buzz”
+            //// For numbers which are multiples of both three and five print “FizzBuzz”
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if ((i % 3 == 0) && (i % 5 == 0))
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            //Console.WriteLine();
+            ////task28
+            //// Write a program that reads a number from the standard input, then draws a
+            //// triangle like this:
+            ////
+            //// *
+            //// **
+            //// ***
+            //// ****
+            ////
+            //// The triangle should have as many lines as the number was
+            int triangle;
+
+            Console.WriteLine("Lets draw the triangle.");
+            triangle = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            for (int i = 1; i <= triangle; i++)
+            {
+                Console.WriteLine(String.Concat(Enumerable.Repeat(triangle, i)));
+            }
+            Console.WriteLine();
+
+            //task29
+            // Write a program that reads a number from the standard input, then draws a
+            // pyramid like this:
+            
+            
+            //    *
+            //   ***
+            //  *****
+            // *******
+
+            // The pyramid should have as many lines as the number was
+
+            int pyramid;
+
+            Console.WriteLine("Lets draw the pyramid.");
+            pyramid = int.Parse(Console.ReadLine());
+
+            int emptyChLenP = pyramid + 1;
+
+            Console.WriteLine();
+            //Console.WriteLine(String.Concat(pyramid));
+
+            for (int i = 0; i < pyramid; i++)
+            {
+                Console.WriteLine(String.Concat
+                    (String.Concat(
+                    (String.Concat(Enumerable.Repeat("*", emptyChLenP - i - 1))),
+                    (String.Concat(Enumerable.Repeat(pyramid, i * 2 + 1))),
+                    (String.Concat(Enumerable.Repeat("*", emptyChLenP - i - 1))))));
+            }
+
+            //task30
+            // Write a program that reads a number from the standard input, then draws a
+            // diamond like this:
+            //
+            //
+            //    *
+            //   ***
+            //  *****
+            // *******
+            //  *****
+            //   ***
+            //    *
+            //
+            // The diamond should have as many lines as the number was
+
+            int diamond;
+
+            Console.WriteLine("Lets draw the diamond.");
+            diamond = int.Parse(Console.ReadLine());
+
+            int diamondLineCount = diamond * 2 - 1;
+            int emptyChLenD = diamond + 1;
+
+            int dCountH = 0;
+            int dCountB;
+
+
+            Console.WriteLine();
+            //Console.WriteLine(String.Concat(diamond));
+
+            for (int i = 0; i < diamondLineCount; i++)
+            {
+
+                if (i < diamond)
+                {
+                    dCountH = i * 2 + 1;
+                    Console.WriteLine(String.Concat
+                        (String.Concat(
+                        (String.Concat(Enumerable.Repeat("*", emptyChLenD - i - 1))),
+                        (String.Concat(Enumerable.Repeat(diamond, dCountH))),
+                        (String.Concat(Enumerable.Repeat("*", emptyChLenD - i - 1))))));
+
+                }
+                else
+                {
+
+                    dCountH = dCountH - 2;
+
+                    Console.WriteLine(String.Concat
+                       (String.Concat(
+                       (String.Concat(Enumerable.Repeat("*", i - emptyChLenD + 3))),
+                       (String.Concat(Enumerable.Repeat(diamond, dCountH))),
+                       (String.Concat(Enumerable.Repeat("*", i - emptyChLenD + 3))))));
+                }
+
+
+            }
+            //task31
+
+            // Write a program that reads a number from the standard input, then draws a
+            // square like this:
+            //
+            //
+            // %%%%%%
+            // %    %
+            // %    %
+            // %    %
+            // %    %
+            // %%%%%%
+            //
+            // The square should have as many lines as the number was
+            int square;
+
+            Console.WriteLine("Lets draw the square.");
+            square = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            //Console.WriteLine(String.Concat(pyramid));
+
+            for (int i = 1; i <= square; i++)
+            {
+                if (i == 1)
+                {
+                    Console.WriteLine(String.Concat(Enumerable.Repeat(square, square)));
+                }
+                else if ((i < square) && (i > 0))
+                {
+
+
+                    Console.WriteLine(String.Concat
+                       (String.Concat(square,
+                       (String.Concat(Enumerable.Repeat(" ", square - 2))),
+                       (String.Concat(square)))));
+
+
+                }
+                else //if (i == diagonal)
+                {
+                    Console.WriteLine(String.Concat(Enumerable.Repeat(square, square)));
+                }
+            }
+
+            //task32
+
+            // Write a program that reads a number from the standard input, then draws a
+            // square like this:
+            //
+            //
+            // %%%%%
+            // %%  %
+            // % % %
+            // %  %%
+            // %%%%%
+            //
+            // The square should have as many lines as the number wa
+            int diagonal;
+
+            Console.WriteLine("Lets draw the diagonal.");
+            diagonal = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            //Console.WriteLine(String.Concat(pyramid));
+
+            for (int i = 1; i <= diagonal; i++)
+            {
+                if (i == 1)
+                {
+                    Console.WriteLine(String.Concat(Enumerable.Repeat(diagonal, diagonal)));
+                }
+                else if ((i < diagonal) && (i > 0))
+                {
+
+
+                    Console.WriteLine(String.Concat
+                       (String.Concat(diagonal,
+                       (String.Concat(Enumerable.Repeat(" ", i - 1))),
+                       (String.Concat(diagonal)),
+                       (String.Concat(Enumerable.Repeat(" ", diagonal - i - 1))), diagonal)));
+
+
+                }
+                else //if (i == diagonal)
+                {
+                    Console.WriteLine(String.Concat(Enumerable.Repeat(diagonal, diagonal)));
+                }
+            }
+
+            //task33
+            // Write a program that stores a number and the user has to figure it out
+            // The user can input guesses
+            // After each guess the program would tell one of the following:
+            //
+            // The stored number is higher
+            // The stried number is lower
+            // You found the number: 8
+
+            int rightN = 6;
+            int mysteriousN;
+            bool resultN = false;
+
+            Console.WriteLine("Lets guess numbers.");
+
+            do
+            {
+                mysteriousN = int.Parse(Console.ReadLine());
+
+                if (mysteriousN < rightN)
+                {
+                    Console.WriteLine("The right number is higher");
+                    Console.WriteLine("Try again.");
+                    resultN = false;
+                }
+                else if (mysteriousN > rightN)
+                {
+                    Console.WriteLine("The right number is lower");
+                    Console.WriteLine("Try again.");
+                    resultN = false;
+                } else 
+                    {
+                    Console.WriteLine("You got it!");
+                    resultN = true;
+                }
+
+            } while (!resultN);
+
+
+            //task34
+            // Write a program that asks for a number
+            // It would ask this many times to enter an integer
+            // If all the integers are entered, it should print the sum and average of these
+            // integers like:
+            //
+            // Sum: 22, Average: 4.4
+
+
+            //task35
+            // Crate a program that draws a chess table like this
+            //
+            // % % % %
+            //  % % % %
+            // % % % %
+            //  % % % %
+            // % % % %
+            //  % % % %
+            // % % % %
+            //  % % % %
+
+            bool answer;
+            Console.WriteLine("Do you want to generate chess table (true/false)?");
+            answer = bool.Parse(Console.ReadLine());
+
+            if(answer)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    Console.WriteLine("% % % % ");
+                    Console.WriteLine(" % % % %");
+                }
+            }
+
+
         }
     }
 }
