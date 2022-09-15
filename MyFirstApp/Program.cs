@@ -984,7 +984,7 @@ namespace GreenFox
 
             //  should print: `-1`
             // Console.WriteLine(Substr("this is what I'm searching in", "not"));
-
+            
             string subString;
             string sample;
 
@@ -995,15 +995,17 @@ namespace GreenFox
 
             if (sample.Contains(subString))
             {
-                Console.WriteLine("Searched string starts at position ");
+                Console.WriteLine("Searched string starts at position " + sample.IndexOf(subString));
             } else
             {
                 Console.WriteLine("Not there.");
             }
 
-            
+       
 
-            
+
+
+
 
         }
     }
