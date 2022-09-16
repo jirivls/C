@@ -79,9 +79,9 @@ int Sum(int[] number)
 int[] ints = { 10, 15, 20, 30 };
 Console.WriteLine(Sum(ints));
 
-*/
 
-/*
+
+*/
 //task1
 
 // - Create an array variable named `numbers`
@@ -132,7 +132,7 @@ Console.WriteLine(numbers[1] + numbers[2]);
 // - Change the value of the fourth element (8) to 4
 // - Print the fourth element
 Console.ReadLine();
-int[] numbers = { 1, 2, 3, 8, 5, 6 };
+int[] numbers4 = { 1, 2, 3, 8, 5, 6 };
 
 numbers[3] = 4;
 Console.WriteLine(numbers[3]);
@@ -144,7 +144,7 @@ Console.WriteLine(numbers[3]);
 //- Increment the third element
 //- Print the third element
 Console.ReadLine();
-int[] numbers = { 1, 2, 3, 4, 5 };
+int[] numbers5 = { 1, 2, 3, 4, 5 };
 numbers[2]++;
 Console.WriteLine(numbers[2]);
 
@@ -154,7 +154,7 @@ Console.WriteLine(numbers[2]);
 //   with the following content: `[4, 5, 6, 7]`
 // - Print all the elements of `numbers`
 Console.ReadLine();
-int[] numbers = { 4, 5, 6, 7 };
+int[] numbers6 = { 4, 5, 6, 7 };
 
 for(int i = 0; i < numbers.Length;  i++)
 {
@@ -201,7 +201,7 @@ for (int i = 0; i < arrayRow.GetLength(0); i++)
 //   with the following content: `[3, 4, 5, 6, 7]`
 // - Double all the values in the array
 Console.ReadLine();
-int[] numbers = { 3, 4, 5, 6, 7 };
+int[] numbers8 = { 3, 4, 5, 6, 7 };
 
 for (int i = 0; i < numbers.Length; i++)
 {
@@ -275,7 +275,7 @@ Console.WriteLine($"1st: {orders[0]}, 2nd {orders[1]}, 3rd {orders[2]}");
 // - Print the sum of the elements of `numbers`
 Console.ReadLine();
 
-int[] numbers = { 3, 4, 5, 6, 7 };
+int[] numbers12 = { 3, 4, 5, 6, 7 };
 Console.WriteLine(numbers.Sum());
 
 
@@ -285,9 +285,9 @@ Console.WriteLine(numbers.Sum());
 // - Reverse the order of the elements of `numbers`
 // - Print the elements of the reversed `numbers`
 Console.ReadLine();
-int[] numbers = { 3, 4, 5, 6, 7 };
-(numbers[4], numbers[3], numbers[2], numbers[1], numbers[0]) = (numbers[0], numbers[1], numbers[2], numbers[3], numbers[4]);
-Console.WriteLine($"The reversed order is: {numbers[0]}, {numbers[1]}, {numbers[2]}, {numbers[3]}, {numbers[4]}");
+int[] numbers13 = { 3, 4, 5, 6, 7 };
+(numbers13[4], numbers13[3], numbers13[2], numbers13[1], numbers13[0]) = (numbers13[0], numbers13[1], numbers13[2], numbers13[3], numbers13[4]);
+Console.WriteLine($"The reversed order is: {numbers13[0]}, {numbers13[1]}, {numbers13[2]}, {numbers13[3]}, {numbers13[4]}");
 
 
 //task14
@@ -393,7 +393,7 @@ Console.WriteLine("Finding position of int in given array..");
 int num3 = int.Parse(Console.ReadLine());
 
 int[] arrayNum = { 1, 11, 34, 52, 61 };
-string result = null;
+string result19 = null;
 //bool result = arrayNum[2].ToString().Contains(num3.ToString());
 
 //Console.WriteLine(result);
@@ -404,20 +404,20 @@ string numIndex(int num2)
     {
         if (arrayNum[i].ToString().Contains(num3.ToString()))
         {
-            result = result + Convert.ToString(i) + ",";
+            result19 = result19 + Convert.ToString(i) + ",";
         }
     }
 
-    if (String.IsNullOrEmpty(result))
+    if (String.IsNullOrEmpty(result19))
     {
-        result = "[]";
+        result19 = "[]";
     }
     else
     {
-        result = result.Remove(result.Length - 1);
-        result = String.Concat("[", result, "]");
+        result19 = result19.Remove(result19.Length - 1);
+        result19 = String.Concat("[", result19, "]");
     }           
-    return result;
+    return result19;
 }
 
 Console.WriteLine(numIndex(num3));
@@ -451,13 +451,13 @@ Console.WriteLine(numIndex(num3));
             Console.WriteLine(integer);
     }
 
-*/
+
 //task21
 // is anagram?
 
 string word1 = "";
     string word2 = "";
-    bool result = true;
+    bool result21 = true;
 
     Console.WriteLine("What are your words?");
     word1 = (Console.ReadLine());
@@ -483,7 +483,7 @@ if (lenWord1 == lenWord2)
             {
                 if (!word1Arr.Contains(word2Arr[i]))
                 {
-                    result = false;
+                    result21 = false;
                 }
             }
 
@@ -491,12 +491,14 @@ if (lenWord1 == lenWord2)
         } else
         {
                 Console.Write("Not the same");
-        }
+                result21 = false;
+    }
         } else
     
         {
          Console.Write("They arent even the same lenght..");
-        }
+        result21 = false;
+}
 
 
 
