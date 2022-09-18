@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Runtime.InteropServices;
 // - Create an array variable named `numbers`
 //   with the following content: `[4, 5, 6, 7]`
 // - Print the third element of `numbers`
+
 /*
 Console.WriteLine("How many numbers are there going to be?");
 int lenght = int.Parse(Console.ReadLine());
@@ -156,9 +160,9 @@ Console.WriteLine(numbers[2]);
 Console.ReadLine();
 int[] numbers6 = { 4, 5, 6, 7 };
 
-for(int i = 0; i < numbers.Length;  i++)
+for(int i66 = 0; i66 < numbers.Length;  i66++)
 {
-    Console.WriteLine(numbers[i]);
+    Console.WriteLine(numbers[i66]);
 }
 
 
@@ -183,13 +187,13 @@ int len = int.Parse(Console.ReadLine());
 int[,] arrayRow = new int[len,len];
 arrayRow[1, 0] = 1;
 
-for (int i = 0; i < arrayRow.GetLength(0); i++)
+for (int i7 = 0; i7 < arrayRow.GetLength(0); i7++)
 {
     for (int j = 0; j < arrayRow.GetLength(1); j++)
     {                    
-        arrayRow[i,j] = 0;
-        arrayRow[j,i] = 1;
-        Console.Write(arrayRow[i, j]);
+        arrayRow[i7,j] = 0;
+        arrayRow[j,i7] = 1;
+        Console.Write(arrayRow[i7, j]);
     }
     Console.WriteLine();
 
@@ -203,10 +207,10 @@ for (int i = 0; i < arrayRow.GetLength(0); i++)
 Console.ReadLine();
 int[] numbers8 = { 3, 4, 5, 6, 7 };
 
-for (int i = 0; i < numbers.Length; i++)
+for (int i8 = 0; i8 < numbers.Length; i8++)
 {
-    numbers[i] = numbers[i]*2;
-    Console.WriteLine(numbers[i]);
+    numbers[i8] = numbers[i8]*2;
+    Console.WriteLine(numbers[i8]);
 }
 
 
@@ -229,11 +233,11 @@ string[,] colors = new string[,]
     };
 
 
-for (int i = 0; i < colors.GetLength(0); i++)
+for (int i8 = 0; i8 < colors.GetLength(0); i8++)
 {
     for (int j = 0; j <= colors.GetLength(0) + 1; j++)
     {
-        Console.Write((colors[i, j])+ " ");
+        Console.Write((colors[i8, j])+ " ");
     }
     Console.WriteLine();
  }
@@ -439,9 +443,9 @@ Console.WriteLine(numIndex(num3));
 
     int[] integerList = new int[lenght];
 
-    for (int i = 0; i < integerList.Length; i++)
+    for (int i20 = 0; i20 < integerList.Length; i20++)
     {
-        integerList[i] = int.Parse(Console.ReadLine());    
+        integerList[i20] = int.Parse(Console.ReadLine());    
     }
 
     int[] newList = integerList.Distinct().ToArray();
@@ -479,9 +483,9 @@ if (lenWord1 == lenWord2)
         if (String.Concat(word1.OrderBy(c => c)) == String.Concat(word2.OrderBy(c => c)))
         {
 
-            for (int i = 0; i < lenWord1; i++)
+            for (int i21 = 0; i21 < lenWord1; i21++)
             {
-                if (!word1Arr.Contains(word2Arr[i]))
+                if (!word1Arr.Contains(word2Arr[i21]))
                 {
                     result21 = false;
                 }
@@ -501,7 +505,190 @@ if (lenWord1 == lenWord2)
 }
 
 
+//task22
 
-//Console.WriteLine(String.Concat(word1.OrderBy(c => c)));
+//Console.WriteLine(String.Concat(palindrome, Reverse(palindrome));
 
 
+
+string wordIn="";
+string wordOut = "";
+
+Console.WriteLine("Provide a word - palindrome");
+wordIn = Console.ReadLine();
+wordOut = wordIn;
+
+int i;
+int len22 = wordIn.Length - 1;
+
+string createPalindrome(string palindrome)
+{
+    for (i = len; i >= 0; i--)
+    {
+
+        wordOut = wordOut + wordIn[i];
+
+
+    }
+    return wordOut;
+}
+
+Console.WriteLine(createPalindrome(wordOut));
+
+//task23
+
+
+    string wordOutA = "";
+    //string wordOutB = "";
+    string wordA = "";
+    string wordOfArrayB = "";
+    string result23 = "";
+    string palindrome = "";
+
+
+    Console.WriteLine("Provide a word - palindrome search");
+    Console.WriteLine("---------------------------------");
+
+    palindrome = Console.ReadLine();
+    wordOutA = palindrome;
+
+string searchPalindrome(string palindrome)
+{
+
+    int i, i1, i2, i3, i4, i5, i6;
+    int len2 = palindrome.Length - 3;
+
+    List<string> listA = new List<string>();
+    List<string> listB = new List<string>();
+
+    //for (i1 = len2; i1 >= 0; i1--)
+    //{
+    //    wordOutB = wordOutB + palindrome[i1];
+
+    //}
+    int test = 3;
+
+    for (i2 = 0; i2 < len2; i2++)
+    {
+
+        for (i3 = 0; i3 < len2; i3++)
+        {
+            try
+            {
+
+                wordA = wordOutA.Substring(i3, i2 + 3);
+                listA.Add(wordA);
+                //Console.WriteLine(listA.Last());
+
+            }
+            catch { }
+
+        }
+    }
+
+
+        //    listA = palindrome.Split(' ').ToList();
+
+        //foreach (var l in listA)
+        //{
+        //    Console.WriteLine(l);
+        //}
+
+        string[] word1Arr = listA.ToArray();
+
+    for (i4 = 0; i4 < word1Arr.Length; i4++)
+    {
+
+        wordOfArrayB = "";
+        char[] charsOfArrayW = word1Arr[i4].ToCharArray();
+
+        try
+        {
+            for (i5 = 1; i5 <= charsOfArrayW.Length; i5++)
+            {
+                wordOfArrayB = wordOfArrayB + charsOfArrayW[charsOfArrayW.Length - i5];
+
+            }
+
+        }
+        catch { }
+        listB.Add(wordOfArrayB);
+    }
+
+
+
+    for (i6 = 0; i6 < listA.Count(); i6++)
+    {
+
+        if (listA[i6].ToString() == listB[i6].ToString())
+        {
+            //Console.WriteLine(listA[i6].ToString());
+            result23 = result23 + '"' + listA[i6].ToString() + '"' + ",";
+        }
+    }
+
+    if (result23 != "")
+    {
+        result23 = String.Concat(("["), (result23.Remove(result23.Length - 1)), ("]"));
+    }
+
+
+    return result23;
+
+}
+
+Console.WriteLine(searchPalindrome(palindrome));
+
+
+
+//task24
+//  Create a function that takes an array of numbers as parameter
+//  and returns an array where the elements are sorted in ascending numerical order
+//  When you are done, add a second boolean parameter to the function
+//  If it is `true` sort the array descending, otherwise ascending
+
+//  Example:
+//Console.WriteLine(Bubble(new int[] { 34, 12, 24, 9, 5 }));
+////  should print [5, 9, 12, 24, 34]
+//Console.WriteLine(AdvancedBubble(new int[] { 34, 12, 24, 9, 5 }, true));
+////  should print [34, 24, 12, 9, 5]
+///
+
+Console.WriteLine("How many number will be used?");
+int numberOfInt = int.Parse(Console.ReadLine());
+Console.WriteLine("Provide the numbers..");
+int[] arrayIn = new int[numberOfInt];
+int[] sortedArray = new int[numberOfInt];
+string resultString = "";
+
+for (int i24 = 0; i24 < arrayIn.Length; i24++)
+{
+    arrayIn[i24] = int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine("Type true/false for ascending order.");
+bool orderOfNum = bool.Parse(Console.ReadLine());
+
+Console.WriteLine("Here they are sorted..");
+
+int[] sortArray(int[] sortedArray, bool orderOfNum)
+{
+
+    Array.Sort(arrayIn);
+    
+    if (!orderOfNum)
+    {
+        Array.Reverse(arrayIn);
+    }
+
+    sortedArray = arrayIn;
+    return sortedArray;
+}
+
+
+foreach (int res in sortArray(sortedArray,orderOfNum))
+{
+
+    Console.Write(res + ",");
+   
+}
