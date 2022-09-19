@@ -7,7 +7,7 @@ namespace SimpleReplace
     {
         public static void Main(string[] args)
         {
-            /*
+            
             string testString = "This is testing string.";
             List<string> stringList = new List<string>();
 
@@ -22,7 +22,7 @@ namespace SimpleReplace
             Console.WriteLine(sb.ToString());
             */
 
-            
+            /*
             //task1
              Console.WriteLine("task1");
 
@@ -204,7 +204,9 @@ namespace SimpleReplace
             //task8
              Console.WriteLine("task8");
             List<string> listA = new List<string> { "Apple", "Avocado", "Blueberries", "Durian", "Lychee" };
-            List<string> listB = listA;
+            List<string> listB = new List<string>();
+
+            listB = listA.ToList();
 
             if (listA.Contains("Durian"))
             {
@@ -232,7 +234,8 @@ namespace SimpleReplace
             {
                 Console.Write(item + ",");
             }
-            
+
+            Console.WriteLine();
             Console.WriteLine("task9");
             //task9
             Dictionary<string, string> dic2 = new Dictionary<string, string> ();
@@ -535,7 +538,7 @@ namespace SimpleReplace
 
         }
 
-
+        
 
     }
     }
