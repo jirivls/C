@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 
 namespace SimpleReplace
@@ -20,9 +21,9 @@ namespace SimpleReplace
             StringBuilder sb = new StringBuilder("This is testing string.");
             sb.Replace("t", "T");
             Console.WriteLine(sb.ToString());
-            */
+            
 
-            /*
+            
             //task1
              Console.WriteLine("task1");
 
@@ -60,10 +61,10 @@ namespace SimpleReplace
             // using the StringBuilder class!
 
 
-            StringBuilder sb = new StringBuilder(quote);
+            StringBuilder sb2 = new StringBuilder(quote);
             sb.Insert(quote.IndexOf("you"), "always takes longer than ");
 
-            Console.WriteLine(sb);
+            Console.WriteLine(sb2);
             
              Console.WriteLine("task4");
             //task4
@@ -417,7 +418,7 @@ namespace SimpleReplace
                 }
 
             }
-
+            
                      
             //task15
             Console.WriteLine("task15");
@@ -458,6 +459,8 @@ namespace SimpleReplace
 
             int prodQB = 0;
             int prodQA = 0;
+
+            int temp = 0;
 
             foreach (KeyValuePair<string, int> item in dicB)
             {
@@ -535,7 +538,7 @@ namespace SimpleReplace
             }
 
 
-
+        
         }
 
         
